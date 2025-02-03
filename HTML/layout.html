@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 항상 스타일은 밖에서 안으로 -->
+     <!-- 크기, 비율, 위치, 모양, 색상, 질감 순으로 -->
+    <style>
+        div#wrap{
+            width: 1200px;
+            height: 85vh;
+            margin: 0 auto;
+        }
+        div#header{
+            height: 20%;
+
+        }
+        /* 스타일의 '~안에'는 띄어쓰기로  */
+        div#header div#top-bar-wrap{
+            height: 30px;
+            overflow: hidden;
+        }
+        div#header div#top-bar-wrap div#area1{
+            width:30%;
+            height: 30px;
+            float: left
+
+        }
+
+        div#header div#top-bar-wrap div#area2{
+            width:40%;
+            height: 30px;
+
+            float: left;
+            text-align: center;
+        }
+
+        div#header div#top-bar-wrap div#area3{
+            width:30%;
+            height: 30px;
+
+            float: left;
+
+            text-align: right;
+        }
+
+        div#section{
+            height: 60%;
+
+        }
+        div#footer{
+            height: 20%;
+
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div id = "top-bar-wrap">
+                <div id="area1">Area1</div>
+                <div id="area2">
+                    <span>Area2</span>
+                </div>
+                <div id="area3">
+                <span>로이님 안녕하세요</span>
+        </div>
+    </div>
+</div>
+    <div id="section"></div>
+    <div id="footer"></div>
+</body>
+</html>

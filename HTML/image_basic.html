@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button file="1.jpg">1</button>&nbsp;&nbsp;
+    <button file="2.jpg">2</button>&nbsp;&nbsp;
+    <button file="3.jpg">3</button><br/>
+    <hr/>
+    <img src="./resources/media/Penguins.jpg" alt="펭귄" width="300"  />
+    <img src="Nothing" alt="그림이 존재하지 않습니다" width="300" />
+    <!-- width만 준 이유:횡스크롤은 인간이 본능적으로 불편함을 느낌 -->
+    <!-- 이미지의 비율에 맞게 브라우저가 세로는 맞춰주기때문. -->
+
+     <script>
+        for(var btn of document.querySelectorAll('button')){
+           btn.onmouseover=function(){
+            let src ="./resources/media/"+this.getAttribute("file");
+            document.querySelector("img[alt='펭귄']").src=src;
+
+            // alert(this.name);
+            // let src ="./resources/media/"
+            // switch(this.name){
+            //     case"1":
+            //         src+="1.jpg"; // src = src + "1.jpg"
+            //         break;
+            //     case"2":
+            //         src+="2.jpg";
+            //         break;
+            //     case"3":
+            //         src+="3.jpg";    
+            //         break;
+            //     }
+                // alert(src);
+                
+           }
+            // 발생된 이벤트의 이름
+            // 대상.이벤트=핸들러
+    }
+     </script>
+</body>
+</html>
