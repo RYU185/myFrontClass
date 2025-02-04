@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Selector Basic</title>
+    <style>
+        /* 자손/후손 선택자 */
+        #header > h1{color: red;}
+        #section h1{color: orange; }
+
+        #header h1, #header h2{
+            color:red;
+        }
+
+        /* 자손(>)을 직접 설정하면 red가 설정되는건 h1 class="title"인 Lorem ipsum만 설정된다. */
+        /* #header h1 으로만 설정하면 그 아래 자손인 Navigation 또한 red로 설정된다. */
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1 class="title">Lorem ipsum</h1>
+        <div id="nav">
+            <h2>Navigation</h2>
+        </div>
+    </div>
+    <div id="section">
+        <h1 class="title">Lorem ipsum</h1>
+        <p>Loem ipsum sit amet, counsectetur adipiscing elit</p>
+    </div>
+    <!-- 주의할 점 -->
+     <!-- 
+    <style>
+        #header h1, h2 : #header 아래 자손 h1과 h2
+        #header h1, #header h2 : 
+    </style>
+      -->
+</body>
+</html>

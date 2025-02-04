@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 초기화 */
+        /* 브라우저의 기본 스타일 시트 세팅을 전부 지우고 내가 원하는 스타일로 초기화 */
+        /* 전체 선택 선택자 = '*' */
+        *{
+            margin: 0;
+            padding: 0;
+
+            font-size: 12px;
+            font-family: '맑은 고딕','돋움체';
+            color: rgb(33, 33, 33);
+            /* 글자색으로 완전 black은 비추천. */
+        }
+
+        h1{
+            font-size: 2.0em;
+            color: red;
+                    }
+        h1#my{
+            font-size: 2.0em;
+            color: blue;
+        }
+        /* 특별할수록, 우선순위는 더 높아진다. */
+        h2{
+            font-size: 1.5em;
+        }
+        h3{
+            font-size: 1.2em;
+        }
+
+        .btn{
+            /* 클래스는 . 으로! */
+            /* 아이디는 # 으로! */
+            display: block;
+            /* block으로 하지않으면 width와 height를 설정할 수 없으므로 */
+            width: 50px;
+            height: 20px;
+
+            text-align: center;
+            line-height: 20px;
+
+            background-color: gray;
+            color:white;
+
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12);
+
+            cursor: pointer;
+        }
+
+        .btn-add{
+            background-color: blue;
+        }
+        .btn-modify{
+            background-color: orange;
+        }
+        .btn-del{
+            background-color: red;
+        }
+        .btn-list{
+            background-color: green;
+        }
+        /* id는 이렇게 할 이유가 없다. 왜? 어차피 특별하게 적용할 한번을 제외하고는 쓰지 않기 때문에 */
+        /* 하지만 class는 공통분모를 갖고있으며 적용해야할 곳이 여러군데임. */
+
+        button.btn.btn-add{
+            background-color: brown;
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+    <span class="btn btn-add">등록</span>&nbsp;&nbsp;&nbsp;
+    <span class="btn btn-modify">수정</span>&nbsp;&nbsp;&nbsp;
+    <span class="btn btn-del">삭제</span>&nbsp;&nbsp;&nbsp;
+    <span class="btn">취소</span>&nbsp;&nbsp;&nbsp;
+    <span class="btn btn-list">목록</span>
+    <!-- 스타일이 같은 성분이 있을 경우 순서대로 적용한다 -->
+     <!-- btn 적용 후 btn-add 적용 -->
+<hr>
+<p>안녕하세요.</p>
+<h1>안녕하세요.</h1>
+<h1 id="my">안녕하세요.</h1>
+<h2>안녕하세요.</h2>
+<h3>안녕하세요.</h3>
+<a href="#">안녕하세요.</a>
+<button class="btn btn-add">회원가입</button>
+</body>
+</html>

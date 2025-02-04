@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* 1. 리스트 모양 하지마 (점 찍는거 하지마) */
+    li{
+        width: 80px;
+
+        text-align: center;
+
+        list-style: none;
+        float: left;
+        padding: 20px; 
+
+        background-color: rgb(235, 235, 235);
+        color: rgb(0, 0, 0);
+        /* float : 정렬 */
+        /* padding : 내부여백 */
+        /* width와 height를 안주면 내용만큼 크기가 벌어지거나 짧아짐 */
+        /* border-radius 둥그렇게 만들다  */
+
+    }
+
+    li:first-child{
+        border-radius: 10px 0 0 10px;
+    }
+    li:last-child{
+        border-radius: 0 10px 10px 0;
+    }
+    li:nth-child(2n){
+        background-color: rgb(215, 215, 215);
+    }
+    /* 제한될수록 우선순위가 높다 */
+
+    li:hover{
+        background-color: red;
+        color: yellow;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    </style>
+    <style>
+        h1{
+            width: 80px;
+            height: 80px;
+            border-radius: 10px 0px 0px 10px;
+
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="circle"></h1>
+    <ul>
+        <li>첫 번째</li>
+        <li>두 번째</li>
+        <li>세 번째</li>
+        <li>네 번째</li>
+        <li>다섯 번째</li>
+        <li>여섯 번째</li>
+        <li>일곱 번째</li>
+    </ul>
+</body>
+</html>
