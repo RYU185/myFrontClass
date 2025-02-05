@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button{
+            width: 150px;
+            height: 70px;
+            background-color: rgb(222, 111, 111);
+
+            border-radius: 30px;
+            border: 10px solid rgb(255, 255, 255);
+            /* 모서리 */
+            box-shadow: 1px 1px 2px rgb(174, 174, 174);
+            /* 셰이딩은 사실 요새 쓰지 않는다. 써도 있는듯 없는듯.
+            플랫Flat하게 표현하는것이 트렌드 */
+            text-align: center;
+        }
+        .button > a {
+            text-decoration: none;
+            color: white;
+            /* 세로는 줄간격을 이용한다 */
+            line-height: 65px;
+            font-size: 2em;
+            font-style: italic;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="button">
+        <a href="#">Click</a>
+    </div>
+</body> 
+</html>
