@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.container::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        div.item{
+            width: 100px;
+            height: 40px;
+            margin: 0 3px;
+            padding: 10px;
+
+            float: left;
+
+            border: 1px solid black;
+            line-height: 40px;
+            text-align: center;
+
+        }
+/* 
+        div.clear{
+            clear: both;
+        } */
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, fugit at. Iusto ipsum neque sit nam. Provident ipsam beatae fugiat pariatur cupiditate eligendi non, illo maxime, accusamus iste impedit reprehenderit!</p>
+    <div class="container">
+        <div class="item">메뉴-1</div>
+        <div class="item">메뉴-2</div>
+        <div class="item">메뉴-3</div>
+        <div class="item">메뉴-4</div>
+    </div>
+    <!-- <div class="clear"></div> -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla dolorem aspernatur nam molestiae doloremque magni quasi nemo quo alias consequuntur excepturi, nihil eos sit! Assumenda sunt fuga blanditiis! Impedit, aliquam.</p>
+
+    </body>
+</html>

@@ -1,0 +1,275 @@
+@charset "utf-8";
+* {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  font-family: "맑은 고딕";
+  color: #666666;
+}
+a {
+  text-decoration: none;
+  display: block;
+}
+div#wrap {
+  min-width: 1340px;
+  background-color: #ffffff;
+  font-size: 20px;
+}
+header div#header-wrap{
+  width: 1340px;          /* 상단 너비(브라우저100%) */
+  height: 100px;          /* 상단 높이 */
+  /* overflow: hidden; */
+  position:relative;
+}
+header div#header-wrap div#logo{
+  width: 240px;            /* 로고 영역 너비 */
+	height: 100px;           /* 로고 영역 높이 */
+  float:left;
+}
+
+header div#header-wrap div#logo img{
+  width: 180px;
+	margin-top: 10px;
+	margin-left: 25px;
+}
+header div#header-wrap nav{
+  float:right;
+  width: 800px;           /* 메뉴 영역 너비 */
+  height: 100px;           /* 메뉴 영역 높비 */
+
+  margin-top: 50px;
+  margin-right: 0px;
+}
+
+header div#header-wrap nav > ul{
+  float:right;
+  /* overflow:hidden; */ 
+  position:relative;
+}
+
+header div#header-wrap nav > ul > li  {
+  float:left;    
+}
+header div#header-wrap nav > ul > li > a{
+  width: 200px;
+  height: 50px;
+
+  font-size: 18px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #666666;
+  color: #ffffff;
+  font-weight: bold;  
+}
+header div#header-wrap nav > ul > li > a:hover{
+  background-color: #006478;
+}
+header div#header-wrap nav > ul > li > ul{  
+  width: 200px;  
+  opacity: 0;
+  transition:opacity 0.5s;
+  position: absolute;
+  z-index: 5;
+}
+header div#header-wrap nav > ul > li:hover > ul{
+  opacity:1;
+}
+
+header div#header-wrap nav > ul > li > ul>li>a{
+  width: 200px;
+  height: 40px;
+
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #bbbbbb;
+  color: #333333;
+  font-weight: bold; 
+}
+header div#header-wrap nav > ul > li > ul>li>a:hover{
+  background-color: #006478;
+}
+
+div#wrap div.imgslide{
+  width: 100%;            /* 이미지 슬라이드 너비 */
+  height: 350px;          /* 이미지 슬라이드 높이 */
+  position: relative;
+}
+
+div#wrap div.imgslide > a > img{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+div#wrap div.imgslide > a > span{
+  width: 450px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  position: absolute;
+  left: 40%;
+  top: 30%;
+  background-color: rgba(100, 100, 100, 0.7);
+}
+div.content{
+  width: 1340px;    /* 콘텐츠(바로가기, 배너, 탭메뉴) 너비 */
+	height: 550px;    /* 콘텐츠(바로가기, 배너, 탭메뉴) 높이 */
+  position: relative;
+  margin-top: -100px;
+  
+}
+div.content > div#shortcut{
+  width: 100%;      /* 너비: contents영역 100% */
+	height: 100px;
+  display: flex;
+  background-color: #abdde6;
+}
+
+div.content > div#shortcut img{
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-top:10px;
+}
+
+div.content > div#banner img{
+  width: 1340px;
+  height: 150px;
+  object-fit: cover;
+}
+div.content > div#banner > span{
+  display:block;
+
+  width: 96%;
+  height: 80px;
+
+  padding-top:30px;
+  position:absolute;
+  left:2%;
+  top:120px;
+
+  line-height: 30px;;
+
+  font-size: 16px;
+  text-align:center;
+  color: #ffffff;
+
+  background-color: rgba(0, 0, 0, 0.3);
+}
+div.content > div#banner > span > h4{
+  font-size: 18px;
+  color: #ffffff;
+}
+
+div.content > div#banner > span:hover{  
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+div.content > div#tabmenu{
+  width: 100%;      /* 너비: contents영역 100% */
+	height: 300px;
+}
+
+div.content > div#tabmenu > ul{
+  padding-top:20px;
+}
+div.content > div#tabmenu > ul > li{
+  width: 100px;
+	line-height: 45px;
+
+  float:left;
+}
+div.content > div#tabmenu > ul > li > a{
+  display: block;
+	font-size:16px;
+	text-align: center; 
+	background-color: #cccccc; 
+	border:1px solid  #dddddd;
+	border-bottom:none; 
+}
+div.content > div#tabmenu > ul > li > a:hover{
+  background-color : #eeeeee;
+}
+div.content > div#tabmenu > ul > li:nth-child(1) > a{
+  border-right:none;
+}
+div.content > div#tabmenu > ul > li.active > a{
+  background-color:#ffffff; 
+}
+
+div.content > div#tabmenu > ul > li > div{
+  position: absolute;
+  left: 0px;
+  height: 0px; 
+  overflow: hidden;
+}
+div.content > div#tabmenu > ul > li.active > div{
+  width: 570px;
+  height: 210px;
+  border: 1px solid #dddddd;
+  z-index: 1;
+}
+
+div.content > div#tabmenu > ul > li> div#notice ul{
+  width: 550px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+div.content > div#tabmenu > ul > li > div#notice ul>li{  /* 공지사항 리스트 영역 스타일 */
+  width: 100%;
+	height: 45px;
+	line-height: 45px;
+	font-size: 14px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+div.content > div#tabmenu > ul > li > div#notice ul>li:nth-child(2n){
+  background-color: #cccccc;
+}
+div.content > div#tabmenu > ul > li > div#notice ul>li::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+div.content > div#tabmenu > ul > li > div#notice ul>li span:first-child{
+  width:480px;
+  float:left;
+  
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis
+}
+div.content > div#tabmenu > ul > li > div#notice ul>li span:last-child{
+  width:70px;
+  float:right;
+}
+
+div.content > div#tabmenu > ul > li > div#gallery ul{
+  display: flex;
+  justify-content: flex-start;
+}
+div.content > div#tabmenu > ul > li > div#gallery ul > li{
+  width: 150px;
+  height: 200px;
+  margin-top: 20px;
+  margin-left: 20px;
+  text-align: center;
+  line-height: 25px;
+  transition: all 0.5s;
+}
+div.content > div#tabmenu > ul > li > div#gallery ul > li:hover{
+  opacity: 0.5;
+}
+div.content > div#tabmenu > ul > li > div#gallery ul > li > a > img{
+  width: 140px;
+  height: 140px;
+  padding: 5px;
+  object-fit: cover;
+}
+
+div.content > div#tabmenu > ul > li > div#gallery ul > li > a > span{
+  font-size: 16px;
+}
