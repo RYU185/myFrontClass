@@ -91,7 +91,7 @@ header div#header-wrap nav > ul > li > ul>li>a:hover{
 }
 
 div#wrap div.imgslide{
-  width: 100%;            /* 이미지 슬라이드 너비 */
+  width: 60%;            /* 이미지 슬라이드 너비 */
   height: 350px;          /* 이미지 슬라이드 높이 */
   position: relative;
 }
@@ -168,21 +168,35 @@ div.content > div#banner > span:hover{
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-div.content > div#tabmenu{
-  width: 100%;      /* 너비: contents영역 100% */
-	height: 300px;
+/* 탭메뉴 */
+#tab-wrap {
+  display: flex;  
+  justify-content: space-between;
+  align-items: flex-start; 
+  width: 100%; 
 }
 
-div.content > div#tabmenu > ul{
-  padding-top:20px;
+div.content > div#tabmenu{
+  width: 60%;    
+	height: 300px;
+  position:relative;
+  
 }
-div.content > div#tabmenu > ul > li{
+
+
+
+div.content > div#tab-wrap > div#tabmenu > ul{
+  padding-top:20px;
+
+}
+
+div.content > div#tab-wrap > div#tabmenu > ul > li{
   width: 100px;
 	line-height: 45px;
-
   float:left;
 }
-div.content > div#tabmenu > ul > li > a{
+
+div.content > div#tab-wrap > div#tabmenu > ul > li > a{
   display: block;
 	font-size:16px;
 	text-align: center; 
@@ -190,35 +204,37 @@ div.content > div#tabmenu > ul > li > a{
 	border:1px solid  #dddddd;
 	border-bottom:none; 
 }
-div.content > div#tabmenu > ul > li > a:hover{
+
+div.content >div#tab-wrap > div#tabmenu > ul > li > a:hover{
   background-color : #eeeeee;
 }
-div.content > div#tabmenu > ul > li:nth-child(1) > a{
+div.content >div#tab-wrap > div#tabmenu > ul > li:nth-child(1) > a{
   border-right:none;
 }
-div.content > div#tabmenu > ul > li.active > a{
+div.content >div#tab-wrap > div#tabmenu > ul > li.active > a{
   background-color:#ffffff; 
 }
 
-div.content > div#tabmenu > ul > li > div{
+div.content > div#tab-wrap >div#tabmenu > ul > li > div{
   position: absolute;
   left: 0px;
   height: 0px; 
   overflow: hidden;
 }
-div.content > div#tabmenu > ul > li.active > div{
+
+div.content >div#tab-wrap > div#tabmenu > ul > li.active > div{
   width: 570px;
   height: 210px;
   border: 1px solid #dddddd;
   z-index: 1;
 }
 
-div.content > div#tabmenu > ul > li> div#notice ul{
+div.content >div#tab-wrap > div#tabmenu > ul > li> div#notice ul{
   width: 550px;
 	margin-top: 12px;
 	margin-bottom: 12px;
 }
-div.content > div#tabmenu > ul > li > div#notice ul>li{  /* 공지사항 리스트 영역 스타일 */
+div.content > div#tab-wrap >div#tabmenu > ul > li > div#notice ul>li{  /* 공지사항 리스트 영역 스타일 */
   width: 100%;
 	height: 45px;
 	line-height: 45px;
@@ -226,15 +242,15 @@ div.content > div#tabmenu > ul > li > div#notice ul>li{  /* 공지사항 리스�
 	margin-left: 10px;
 	margin-right: 10px;
 }
-div.content > div#tabmenu > ul > li > div#notice ul>li:nth-child(2n){
+div.content >div#tab-wrap > div#tabmenu > ul > li > div#notice ul>li:nth-child(2n){
   background-color: #cccccc;
 }
-div.content > div#tabmenu > ul > li > div#notice ul>li::after{
+div.content >div#tab-wrap > div#tabmenu > ul > li > div#notice ul>li::after{
   content: "";
   display: block;
   clear: both;
 }
-div.content > div#tabmenu > ul > li > div#notice ul>li span:first-child{
+div.content >div#tab-wrap > div#tabmenu > ul > li > div#notice ul>li span:first-child{
   width:480px;
   float:left;
   
@@ -242,16 +258,16 @@ div.content > div#tabmenu > ul > li > div#notice ul>li span:first-child{
   overflow: hidden; 
   text-overflow: ellipsis
 }
-div.content > div#tabmenu > ul > li > div#notice ul>li span:last-child{
+div.content >div#tab-wrap > div#tabmenu > ul > li > div#notice ul>li span:last-child{
   width:70px;
   float:right;
 }
 
-div.content > div#tabmenu > ul > li > div#gallery ul{
+div.content > div#tab-wrap >div#tabmenu > ul > li > div#gallery ul{
   display: flex;
   justify-content: flex-start;
 }
-div.content > div#tabmenu > ul > li > div#gallery ul > li{
+div.content > div#tab-wrap >div#tabmenu > ul > li > div#gallery ul > li{
   width: 150px;
   height: 200px;
   margin-top: 20px;
@@ -260,16 +276,42 @@ div.content > div#tabmenu > ul > li > div#gallery ul > li{
   line-height: 25px;
   transition: all 0.5s;
 }
-div.content > div#tabmenu > ul > li > div#gallery ul > li:hover{
+
+div.content >div#tab-wrap > div#tabmenu > ul > li > div#gallery ul > li:hover{
   opacity: 0.5;
 }
-div.content > div#tabmenu > ul > li > div#gallery ul > li > a > img{
+div.content > div#tab-wrap >div#tabmenu > ul > li > div#gallery ul > li > a > img{
   width: 140px;
   height: 140px;
   padding: 5px;
   object-fit: cover;
 }
 
-div.content > div#tabmenu > ul > li > div#gallery ul > li > a > span{
+div.content >div#tab-wrap > div#tabmenu > ul > li > div#gallery ul > li > a > span{
+  font-size: 16px;
+} 
+
+div.content > div#tab-wrap >#tabmenu-right {
+  width: 40%;
+  min-height: 300px;
+}
+
+div.content >div#tab-wrap > #tabmenu-right > ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+div.content >div#tab-wrap > #tabmenu-right > ul > li {
+  text-align: center;
+}
+
+div.content >div#tab-wrap > #tabmenu-right > ul > li > img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+div.content >div#tab-wrap > #tabmenu-right > ul > li > span{
   font-size: 16px;
 }
