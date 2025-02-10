@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let date = new Date();
+        let hours = date.getHours();
+
+        if(hours < 12){
+            // 표현식 "hours < 12"가 참일때 실행
+            alert('오전입니다.');
+        } else {
+            // 표현식 "hours < 12"가 거짓일때 실행
+            alert('오후입니다');
+        }
+
+        // 비교의 우선순위가 있을 경우 if를 두개 넣기도 한다.
+        // 대분류에서 소분류 순으로 가져갈때도 중첩 if문을 쓴다.
+        // 사실 자바나 JS나 중첩 IF문을 가져가는 경우는 거의 없다. 이분법적 사고이기 때문에.
+
+        // Else if문 : 각각의 조건이 모두 별개의 관계 => false인 경우에 대한 대처가 좋음
+        // 중첩 if문 : 각 조건이 종속관계인 경우
+
+    </script>
+</body>
+</html>

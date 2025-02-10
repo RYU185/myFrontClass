@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            margin: 10px;
+        }
+
+        div#box{
+            width:200px;
+            height: 200px;
+            background-color: #383838;
+        }
+    </style>
+</head>
+<body>
+    <input checked type="radio" id="r1" name="1" onclick="select_btn('red');"value="1"><label for="r1">red</label>
+    <input type="radio" id="r2" name="1" onclick="select_btn('orange');" value="2"><label for="r2">orange</label>
+    <input type="radio" id="r3" name="1" onclick="select_btn('yellow');" value="3"><label for="r3">yellow</label>
+    <input type="radio" id="r4" name="1" onclick="select_btn('green');" value="4"><label for="r4">green</label>
+    <!-- label을 찍어주면 radio 체크박스를 굳이 누르지않아도 라벨 이름을 클릭할수 있다. -->
+    <hr>
+    <div id="box"></div>
+
+    <!-- 이전에 배웠던 버튼을 눌렀을때 사진을 바꿨던건 각각의 css와 html을 할당해줬으므로 가능했던 이야기. -->
+     <!-- 미리 body에서 색을 미리 지정해준다면 밑에 switch /case를 쓸 필요가 없다. -->
+
+    <script>
+        select_btn(1);
+        function select_btn(color){
+           
+           document.querySelector("div#box").style.backgroundColor=color;
+        }
+    </script>
+</body>
+</html>
