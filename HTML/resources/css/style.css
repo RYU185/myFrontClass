@@ -264,7 +264,7 @@ div.content >div#tab-wrap > div#tabmenu > ul > li > div#notice ul>li span:last-c
 }
 
 div.content > div#tab-wrap >div#tabmenu > ul > li > div#gallery ul{
-  display: flex;
+  
   justify-content: flex-start;
 }
 div.content > div#tab-wrap >div#tabmenu > ul > li > div#gallery ul > li{
@@ -285,6 +285,7 @@ div.content > div#tab-wrap >div#tabmenu > ul > li > div#gallery ul > li > a > im
   height: 140px;
   padding: 5px;
   object-fit: cover;
+  display: flex;
 }
 
 div.content >div#tab-wrap > div#tabmenu > ul > li > div#gallery ul > li > a > span{
@@ -296,7 +297,7 @@ div.content > div#tab-wrap >#tabmenu-right {
   min-height: 300px;
 }
 
-div.content >div#tab-wrap > #tabmenu-right > ul {
+div.content > div#tab-wrap > #tabmenu-right > ul {
   display: flex;
   justify-content: space-around;
   list-style: none;

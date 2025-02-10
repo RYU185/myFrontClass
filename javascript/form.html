@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <form name="login" action="/member/login" method="post" onsubmit="return false;">;
+        아이디 : <input type = "text" name="id" /><br>
+        패스워드 : <input type="password" name="pwd"><br>
+        <input type="submit" value="로그인" onclick="submit_go();">
+        </form>
+
+<script>
+    function submit_go(){
+        let input_id = document.querySelector("input[name='id']");
+        let input_pwd = document.querySelector("input[name='pwd']");
+
+        if(!input_id.value){
+            alert("아이디는 필수입니다");
+            input_id.focus();
+            return;
+        }
+        if(!input_pwd.value){
+            alert("비밀번호는 필수입니다");
+            input_pwd.focus();
+            return;
+        }
+
+        document.forms.login.submit;
+
+    }
+    // 원인과 결과에 대한 연계성, 관계성을 설명
+    // css와 html을 묶어주는 역할
+    // + 코드를 분리해주는 역할도 있음
+    // 재활용성
+</script>
+</body>
+</html>
