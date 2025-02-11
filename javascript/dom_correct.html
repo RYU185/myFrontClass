@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // script는 선언자가 아니라 객체형태로 받아들여야 하기 때문에 h1, h2를 아직 인식하지 못함
+        // -> 그래서 이벤터 사용
+        windows.onload= function(){
+            // windows = 브라우저 객체
+            // onload = 로딩 다 되고 난 다음에 적용
+            document.querySelector('h1').style.backgroundColor = 'red';
+            document.querySelector('h2').style.color='red'
+        }
+        </script>
+</head>
+<body>
+    <h1>
+        Process - 1
+    </h1>
+    <h2>
+        Process - 2
+    </h2>
+
+    <!-- 보통 이렇게 쓰는게 정상 -->
+    <script>
+        document.querySelector('h1').style.backgroundColor = 'red';
+        document.querySelector('h2').style.color='red'
+    </script>
+   
+</body>
+</html>

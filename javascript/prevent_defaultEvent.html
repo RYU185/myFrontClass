@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 알람은 내보내되 화면이 넘어가지는 않게 -->
+    <!-- <a href="/member/regist" onclick="alert('!!!!!'); return false;">회원등록</a> -->
+
+    <form action="/member/regist" onsubmit="return false;">
+        아이디:<input type="text" name="id"><br>
+        <input type="submit" value="등록">
+    </form>
+
+
+    <a href="/member/regist" onclick="script_func(); return false;">회원등록</a>
+
+    <script>
+        function script_func(){
+            alert("!!!!!")
+        }
+    </script>
+</body>
+</html>

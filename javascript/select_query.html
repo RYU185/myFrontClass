@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <h1>Header</h1>
+
+    <script>
+            // let header = document.querySelector('h1')
+
+            for (let header of document.querySelectorAll('h1')){
+            // querySelector : 원래 all 다 불러오는건데 맨 처음 하나만 선택하여 적용한다
+            // querySelectorAll : 모두 다 적용
+            header.style.color = 'orange';
+            header.style.backgroundColor = 'red';
+            header.innerHTML = 'From JavaScript';
+        };
+
+    </script>
+</body>
+</html>

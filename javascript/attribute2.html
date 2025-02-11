@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="lalala">라라라</h1>
+
+    <img id="img" src="https://placehold.co/200x300">
+
+    <script>
+        let h1= document.querySelector('h1#lalala');
+        alert(h1.innerHTML);
+
+        h1.innerHTML = "<p>로로로</p>"
+
+        alert(document.querySelector('#img').src);
+
+        document.querySelector('#img').src = "https://placehold.co/400x500"
+    </script>
+</body>
+</html>

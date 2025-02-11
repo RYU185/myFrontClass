@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border = "1">
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>성별</th>
+            <th>주소</th>
+        </tr>
+        <tr>
+            <td data-role="name" parent-phone="010-1324-1234" parent-name="김호성" address="대전광역시 유성구 관평동">mimi</td>
+            <td name="age">14</td>
+            <td>여</td>
+            <td>대전광역시 유성구 관평동</td>
+        </tr>
+        <tr>
+            <td data-role="name" parent-phone="010-4898-1234" parent-name="김호성" address="대전광역시 유성구 지족동">mama</td>
+            <td name="age" >14</td>
+            <td>여</td>
+            <td>대전광역시 유성구 관평동</td>
+        </tr> 
+         <tr>
+            <td data-role="name" parent-phone="010-8945-1455" parent-name="김호성" address="대전광역시 유성구 반석동">mumu</td>
+            <td name="age" >14</td>
+            <td>여</td>
+            <td>대전광역시 유성구 관평동</td>
+        </tr>
+    </table>
+    
+    <script>
+        let tds = document.querySelectorAll('td[data-role="name"]');
+        for(let td of tds){
+            td.style.cursor="pointer"
+            td.onclick = function(){
+                let parent = "보호자 정보\n"
+                            + "이름 : "+this.getAttribute("parent-name") + "\n"
+                            + "연락처 : "+this.getAttribute("parent-phone") + "\n"
+                            + "주소 : "+this.getAttribute("address")
+                alert(parent);
+            }
+        }
+
+        tds = document.querySelectorAll('td[name="age"]');
+        for(let td of tds){
+            td.onclick = function(){
+                let ages = "나이 : "+this.getAttribute("age")
+
+                alert(ages);
+            }
+        }
+    </script>
+
+
+</body>
+</html>

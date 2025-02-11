@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traditional Event</title>
+</head>
+<body>
+    <button id="button">버튼 - </button><br>
+    <button id="btn">버튼 - </button>
+
+    <script>
+
+        document.querySelector('button').onclick = star;
+        document.querySelector('btn').onclick = star;
+        // 고정 이벤트
+        // document.querySelector('button').onclick = function(){
+        //     this.textContent = this.textContent+'*';
+        // };
+        // 이름이 없어서 재활용이 안된다.
+        // 이벤트 자체의 고유성이 목적
+        // ex) 등록 버튼
+
+        //그럼 재활용하면 좋지않을까?
+        function star(){
+            this.textContent = this.textContent+'*';
+        }
+        
+    </script>
+</body>
+</html>
