@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+    <style>
+        *{
+            font-family: 'ds-digital';
+        }
+    </style>
+</head>
+<body>
+    <h1 id="date">
+        0000.00.00
+    </h1>
+    <h1 id="time">00:00:00</h1>    
+    <!-- 시간 -->
+
+    <script>
+        function time(){
+            // 코드 분리
+            let date = new Date();
+
+            let date_value = date.getFullYear()+"."+(date.getMonth()+1)+"."+date.getDate();
+            let time_value = date.getHours()+"."+date.getMinutes()+"."+date.getSeconds();
+            
+            // innerHTML: 이 태그안의 id에게 html의 형태로 넣어주는 기능
+            document.querySelector("#date").innerHTML=date_value;
+            document.querySelector("#time").innerHTML=time_value;
+
+        }
+
+        setInterval(time, 1000); // function value로 주기위해.
+        time(); // function을 사용하기 위해.
+
+
+
+    </script>
+</body>
+</html>

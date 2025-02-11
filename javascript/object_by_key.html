@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {
+            name:"kim",
+            eat:function(food){
+                return this.name+"과 함께 "+food+"를 먹었습니다.";
+                // 이 클래스로 만들어진 인스턴스 를 지칭하는 this
+            }
+        }
+        alert(obj.name+"은 "+obj.eat("밥"));
+
+        // JSON은 언제든지 데이터 추가가 가능하다.
+        //  심지어 있는 데이터도 변경 가능하다.
+        obj.id="mimi";
+        obj.name= "Park";
+        obj.eat= function(food){
+            return food+"는 먹기 싫어요";
+        }
+        console.log(obj);
+
+        alert(obj.name+"은 "+obj.eat("밥"));
+    </script>
+</body>
+</html>

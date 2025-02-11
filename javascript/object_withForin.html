@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        아이디: <input type="text" name="id"><br>
+        비밀번호: <input type="text" name="pwd"><br>
+        이름: <input type="text" name="name"><br>
+        이메일: <input type="text" name="email"><br>
+        전화번호: <input type="text" name="phone"><br>
+        주소: <input type="text" name="address"><br>
+    </form>
+
+    <script>
+        let member = {
+            id:"mimi",
+            pwd: "mimi",
+            name:"mimi",
+            email:"mimi@mimi.com",
+            phone: "010-1234-1234",
+            address:"대전 유성구 노은동"
+        };
+
+
+        for (let key of Object.keys(member)){
+            document.querySelector("input[name='"+key+"']").value.member[key];
+            // key값을 주니까 value를 하나씩 뽑아내다.
+        };
+
+
+
+    </script>
+</body>
+</html>

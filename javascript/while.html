@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        관리자암호를 입력하세요
+    </h3>
+    <input type="text" name="pwd"><button id ="confirm" onclick="confirm_pwd();">확인</button>
+    <hr>
+    <div id="view" style="display: none;">
+        <h1>관리자 메뉴</h1>
+        <p>관리자 화면</p>
+    </div>
+
+    <script>
+        function confirm_pwd() {
+            // alert("btn click")
+            let pwd = document.querySelector("input[name = 'pwd']").value;
+
+            // js에서는 (==)등가비교만 한다
+            while(pwd!=="1234"){
+                alert("관리자 암호가 일치하지 않습니다.")
+                pwd=prompt("관리자 암호가 일치하지 않습니다. 다시 입력하세요")
+
+                if(!pwd==null){
+                    return;
+                }
+            }
+            document.querySelector("div#view").style.display="block"
+        }
+    </script>
+</body>
+</html>

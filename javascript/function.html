@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // a 자체가 함수
+        function a(){
+            alert("a func")
+        } 
+        // b가 가리키고 있는 함수
+        let b = function(){
+            alert("b func");
+        }
+
+        // 사용하는데 차이는 없지만 위 두 코드는 구조적으로 다르다
+
+        let c = b;
+        let d = a;
+
+        let json = {
+            name:"kim",
+            func:function(){
+                alert(this.name);
+            }
+        }
+
+        function f(x){
+            return x * x;
+        }
+    </script>
+
+    <script>
+        a(); 
+        // a func
+        b();
+        // b func
+        c();
+        // b func
+        d();
+        // a func
+
+        // 문자열을 알람으로 준 것
+        alert(json.name);
+
+        // 함수를 호출하여 결과값이 나온것
+        json.func();
+
+        // 둘 모두의 결과값은 같지만 구조가 다르다는 것을 이해하자
+
+        alert(f(3)); // 9
+    </script>
+</body>
+</html>
