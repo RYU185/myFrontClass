@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-- // jquery는 등가연산자(=)를 쓰지 않는다.
+        // 모두 함수임.
+        // document.querySelector('div').style.width="100px";
+        // window.onload=function(){}
+        // 를 jquery로 바꾸면
+        // $(document).ready(function(){});
+        // $('div').css("width","100px") -->
+        <h1>Header</h1>
+        <h1>Header</h1>
+        <h1>Header</h1>
+
+<script>
+    for(let header of document.querySelectorAll('h1')){
+        header.style.color="red";
+        header.style.backgroundColor = "black";
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+    $('h1:first-child').css("color", "green");
+    $('h1:first-child').css("background-color","red");
+    document.querySelector('h1').style.fontSize = "80px"
+</script>
+
+<!-- 자바스크립트의 document.querySelector == jquery에서의 $로 교체됨  -->
+ <!-- 자바스크립트는 실행 순서도 굉장히 중요하게 살펴야한다!!!! -->
+  <!-- 자바스크립트에서는 첫번째 h1에만 적용할지 모든 h1에 적용할지에 따라 형태가 다르지만  -->
+   <!-- jquery에서는 모두 적용이 디폴트이므로 반드시 선택자로 지정해줘야함 -->
+    <!-- 자바스크립트와 jquery는 혼용도 가능하다. 자바 스크립트 안에 jquery가 존재하기 때문! -->
+
+
+
+</body>
+</html>

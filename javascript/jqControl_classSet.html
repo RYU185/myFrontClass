@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        #box.hover{
+            /* 상태선택자였다면 :hover 이지만
+            클래스 이므로 .hover */
+
+            background-color: blue;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $('#box').hover(function(){
+            $("#box").addClass('hover');
+        }, function(){
+            $("#box").removeClass('hover');
+        });
+
+        // 잊지 말아야할건 이거다. id가 class보다 우선순위가 높다.
+        // class는 공통, id는 예외의 요소를 적용하여 특별취급을 받기때문에.
+        // 우선순위가 .hover보다 #box의 우선순위가 높아서 .hover의 background color가 무시당했다.
+        // 공통으로 적용된 background color만 무시되고 #box에 없는 border-radius만 적용된거임.
+        // 때문에 #box.hover라고 더 특별취급까지 해줘야 우선순위가 높아짐.
+
+    </script>
+
+</body>
+</html>

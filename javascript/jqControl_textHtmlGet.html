@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Header - 0</h1>
+    <h1>Header - 1</h1>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <script>
+
+    let text = $('h1').text();
+    let html = "";
+    $('h1').each(function(){
+        html += $(this).html();
+    });
+    // each와 $(this)를 기억하자
+    // h1을 하나씩 꺼낸다!
+
+
+    alert("text: "+ text);
+    alert("html: "+ html);
+    // 그런데 jquery에서 호출한 선택자는 모두 가져오는 이 특성에 예외가 존재한다
+    // HTML은 하나만 가져온다. 모두 가져오기위해서는 for문 사용
+    // 반대로 text를 하나만 가져오기 위해서는 선택자에 nth-child 지정
+
+    </script>
+    
+</body>
+</html>

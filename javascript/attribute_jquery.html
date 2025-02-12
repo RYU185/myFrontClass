@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img src="http://placehold.co/400x600">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        alert($('img').attr("src"));
+        // ''는 태그, 선택자는 " "
+
+        $('img').attr("src","http://placehold.co/200x300");
+        // 위 코드가 실행된 후 200x300 코드로 이동하여 수정
+        // 오버로딩
+    </script>
+</body>
+</html>

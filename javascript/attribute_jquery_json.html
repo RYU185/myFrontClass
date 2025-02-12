@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            border: 4px dashed darkseagreen;
+        }
+        /* 이렇게 스타일을 썼다한들 밑에 script로 스타일이 설정되있다면 적용되지 않는다 */
+
+    </style>
+</head>
+<body>
+    <!-- json객체를 이용하여 여러개를 한꺼번에 -->
+    <div>
+    </div>
+
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+    $('div').css({
+        width:"100px",
+        height:"100px",
+        "background-color":"black",
+        // 특수문자가 들어가면 반드시 " "를 써야한다
+        // 구분자 , 써야함
+        border: "2px solid red"
+    }).attr("id", "box")
+    // 메서드 체인: css하고 attribute가 이어진다
+
+    $('.box').css({
+        float:'left',
+        margin: 10,
+        width: 100,
+        height: 100,
+        backgroundColor: "red"
+    });
+</script>
+</body>
+</html>

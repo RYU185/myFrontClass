@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HEAD</h1>
+    <h1>HEAD</h1>
+    <h1>HEAD</h1>
+    <h1>HEAD</h1>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        // document.querySelector('h1').onclick=function(){
+        // alert("click h1");  
+        // }
+
+        // 이벤트 바인딩 "on"
+        // 이로서 알수있는점: jquery는 유지보수에 목적성을 두지 않는다. 새로 만드는게 빠를뿐.
+        $('h1').on({
+            click: function(){
+                $(this).css({
+                    width:200,
+                    height:200,
+                    "background-color":"red"
+                });
+            },
+            mouseover: function(){
+                $(this).css({
+                    width:100,
+                    height:100,
+                    "background-color":"blue"
+                });
+            },
+            mouseout: function(){
+                $(this).css({
+                    width:"100%",
+                    height:74,
+                    "background-color":"white"
+                });
+
+            }
+        })
+        
+        // jquery는 이벤트 메서드 또한 배열 전체에 적용한다.
+
+
+
+    </script>
+
+</body>
+</html>
