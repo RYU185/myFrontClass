@@ -15,7 +15,8 @@ a {
 /* header */
 header {
     width: 100%;
-    border-bottom: 1px solid #ddd;
+    position: absolute;
+    z-index: 9;
 }
 
 header .inner {
@@ -32,8 +33,8 @@ header .inner h1 {
 }
 
 header .inner h1 a {
-    font: bold 24px/1 "arial";
-    color: #444;
+    font: bold 35px/1 "arial";
+    color: #eee;
 }
 
 .inner .util {
@@ -65,7 +66,7 @@ header .inner .gnb li {
 header .inner .gnb li a {
     display: block; /*인라인 요소는 block으로*/
     font: bold 15px/1 "arial";
-    color: rgb(41, 41, 41);
+    color: #eee;
     padding: 20px 40px;
     transition: all 0.5s;
 }
@@ -75,8 +76,197 @@ header .inner .gnb li a:hover {
     color: #fff;
 }
 
+
 /* figure */
+figure {
+    width: 100%;
+    height: calc(100vh - 120px); /* 전체 브라우저 높이에서 120px만큼 빼줌 (header높이) */
+    background: #000;
+    position: relative;
+    overflow: hidden;
+    padding-top: 250px;
+}
+
+figure video {
+    object-fit: cover; /* figure안에 꽉 맞추도록 */
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+figure .inner{
+    position: relative;
+    /* 1. 구조적으로 vedio의 z-index가 절대적으로 높기때문에 (absolute)
+    inner를 앞으로 빼기 위해 relative를 준다 */
+    width: 1180px;
+    margin: 0px auto;
+}
+
+figure .inner h1{
+    font: normal 120px/1 "arial";
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+figure .inner p{
+    font: 16px/1.4 "arial";
+    color: #888;
+    margin-bottom: 60px;
+}
+
+figure .inner a{
+    display: block;
+    width: 400px;
+    height: 30px;
+    border: 1px solid #bbb;
+    font: bold 11px/30px "arial";
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+    transition: all 0.5s;
+}
+
+figure .inner a:hover{
+    background-color: #fff;
+    color: #000;
+}
 
 /* section */
 
+section {
+    width: 100%;
+    padding: 200px 0;
+    /* 위 아래 여백 */
+}
+
+section .inner {
+    width: 1180px;
+    margin: 0px auto;
+    /* 가운데 센터링 */
+}
+
+section .inner h1{
+    font: bold 24px/1 "arial";
+    color: #555;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+section .inner .wrap {
+    width: 100%;
+    display: flex;
+    /* 균등하게 나열할때 flex */
+    justify-content: space-between;
+}
+
+section .inner .wrap article {
+    width: 280px;
+    margin-right: 20px;
+}
+
+section .inner .wrap article h2{
+    margin-bottom: 10px;
+}
+
+section .inner .wrap article h2 a{
+    font: bold 16px/1 "arial";
+    color:#555;
+}
+
+section .inner .wrap article p {
+    font: 14px/1.4 "arial";
+    color: #777;
+}
+
+section .inner .wrap article .pic{
+    width: 100%;
+    height: 120px;
+    background: #333;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+
+}
+section .inner .wrap article .pic img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%; 
+    /* .pic의 사이즈 안에 이미지 꽉 채움 */
+}
+
 /* footer */
+footer {
+    width: 100%;
+    background: #111;
+    padding: 100px 0px;
+    border-top: 1px solid #888;
+}
+
+footer .inner{
+    width: 1180px;
+    margin: 0px auto;
+}
+
+footer .inner .upper{
+    width: 100%;
+    border-bottom: 1px solid #777;
+    padding-bottom: 20px;
+}
+
+footer .inner .upper h1{
+    float: left;
+    font: bold 24px "arial";
+    color: #666;
+}
+
+footer .inner .upper ul{
+    float: right;
+}
+
+footer .inner .upper::after{
+    /* 상단 영역 float 해제 */
+    content: "";
+    display: block;
+    clear: both;
+}
+
+footer .inner .upper ul li{
+    float: left;
+    margin-left: 30px;
+}
+
+footer .inner .upper ul::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+footer .inner .upper ul li a{
+    font: bold 14px/1 "arial";
+    color: #666;
+}
+
+footer .inner .lower {
+    width: 100%;
+    padding-top: 20px;
+}
+
+
+footer .inner .lower address {
+    width: 100%;
+    font: 12px/1.3 "arial";
+    color: #777;
+    margin-bottom: 20px;
+}
+
+footer .inner .lower p{
+    width: 100%;
+    font: 12px/1 "arial";
+    color: #777;
+}
+
+
+
