@@ -26,14 +26,12 @@ header .inner{
     height: 70px;
     margin: 0px auto;
     position: relative;
-    background-color: aqua;
 }
 
 header .inner .upper {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-
 }
 
 header .inner .upper li {
@@ -44,4 +42,11 @@ header .inner .upper li {
 header .inner .upper li a{
     display: block;
     font: bold 24px/1 "arial";
+    text-decoration: none;
+}
+
+header .inner .upper li img{
+    object-fit: cover;
+    width: 10%;
+    height: 10%;
 }
