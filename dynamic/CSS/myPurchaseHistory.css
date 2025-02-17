@@ -1,0 +1,47 @@
+@charset 'utf-8';
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+ul,
+ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* header */
+header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header .inner{
+    width: 1280px;
+    height: 70px;
+    margin: 0px auto;
+    position: relative;
+    background-color: aqua;
+}
+
+header .inner .upper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+header .inner .upper li {
+    margin-top: 25px;
+    
+}
+
+header .inner .upper li a{
+    display: block;
+    font: bold 24px/1 "arial";
+}
