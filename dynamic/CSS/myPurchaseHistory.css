@@ -35,14 +35,18 @@ header .inner .upper {
 }
 
 header .inner .upper li {
+    border-radius: 1px 0 solid;
+    display: block;
     margin-top: 25px;
     
 }
 
 header .inner .upper li a{
+    color: black;
     display: block;
     font: bold 24px/1 "arial";
     text-decoration: none;
+
 }
 
 header .inner .upper li img{
