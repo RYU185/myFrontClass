@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const user = {
+            "userName":"Steve",
+            "age":22,
+            "gender":"Male"
+        }
+        // 로컬 스토리지 저장
+        localStorage.setItem("user", JSON.stringify(user));
+
+        // 로컬 스토리지 읽기
+        const userCopy = JSON.parse(localStorage.getItem(user.userName));
+        console.log(userCopy.userName);
+        
+        //로컬 스토리지 삭제
+        localStorage.removeItem(user.userName);
+    </script>
+
+
+</body>
+</html>
